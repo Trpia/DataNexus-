@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="cyber">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DataNexus Pro</title>
+<meta name="description" content="DataNexus Pro — shipment, inventory and customer management that works offline.">
+<meta name="theme-color" content="#070b16">
+<meta name="color-scheme" content="dark light">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="DataNexus">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<script>
+/* Apply the saved theme before first paint to avoid a flash. */
+try{var t=localStorage.getItem("dnx_theme");if(t&&["cyber","midnight","ocean","light","emerald"].indexOf(t)>-1)document.documentElement.setAttribute("data-theme",t);}catch(e){}
+</script>
+<link rel="stylesheet" href="css/styles.css">
+<script defer src="js/db.js"></script>
+<script defer src="js/crypto.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/store.js"></script>
+<script defer src="js/auth.js"></script>
+<script defer src="js/particles.js"></script>
+<script defer src="js/charts.js"></script>
+<script defer src="js/views/auth.js"></script>
+<script defer src="js/views/dashboard.js"></script>
+<script defer src="js/views/shipments.js"></script>
+<script defer src="js/views/inventory.js"></script>
+<script defer src="js/views/customers.js"></script>
+<script defer src="js/views/analytics.js"></script>
+<script defer src="js/views/notifications.js"></script>
+<script defer src="js/views/profile.js"></script>
+<script defer src="js/views/settings.js"></script>
+<script defer src="js/views/help.js"></script>
+<script defer src="js/views/dev.js"></script>
+<script defer src="js/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div id="root"></div>
+<div id="dev" hidden role="dialog" aria-label="Developer dashboard"></div>
+<div id="toasts" role="status" aria-live="polite"></div>
+<div id="tip" role="tooltip" hidden></div>
+<noscript><p style="padding:24px;color:#fff;font-family:sans-serif">DataNexus Pro needs JavaScript to run.</p></noscript>
+</body>
+</html>
